@@ -47,6 +47,12 @@ public class CardController {
         return ResponseEntity.ok(cardDTOs);
     }
 
+    @DeleteMapping("/{dresseurUuid}/delete/{cardUuid}")
+	public ResponseEntity<?> deleteCard(@PathVariable String dresseurUuid, @PathVariable String cardUuid) {
+		dresseurService.deleteCard(dresseurUuid, cardUuid);
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+	}
+
     private CardDTO convertToDTO(Card card) {
         CardDTO dto = new CardDTO();
 

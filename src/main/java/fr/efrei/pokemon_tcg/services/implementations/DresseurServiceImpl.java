@@ -73,6 +73,15 @@ public class DresseurServiceImpl implements IDresseurService {
 	}
 
 	@Override
+	public boolean deleteCard(String uuidDresseur, String uuidCard) {
+		Dresseur dresseur = findById(uuidDresseur);
+		dresseur.getCardList().removeIf(card -> card.getUuid().equals(uuidCard));
+		cardService.deleteCard(cardService.findById(uuidCard));
+		repository.save(dresseur);
+		return true;
+	}
+
+	@Override
     public List<Card> drawCards(String dresseurUuid, int numberOfCards) {
         Dresseur dresseur = findById(dresseurUuid);
         if (dresseur == null) {

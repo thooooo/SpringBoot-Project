@@ -15,4 +15,6 @@ public interface ICardService {
     Card findById(String uuid);
 
     Card save(Card card);
+
+    Card deleteCard(Card card);
 }

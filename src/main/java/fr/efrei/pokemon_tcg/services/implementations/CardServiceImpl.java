@@ -70,4 +70,10 @@ public class CardServiceImpl implements ICardService {
     public Card save(Card card) {
         return cardRepository.save(card);
     }
+
+    @Override
+    public Card deleteCard(Card card) {
+        cardRepository.delete(card);
+        return card;
+    }
 }

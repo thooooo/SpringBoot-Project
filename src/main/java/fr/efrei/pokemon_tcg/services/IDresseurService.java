@@ -26,4 +26,6 @@ public interface IDresseurService {
     List<Card> getCards(String dresseurUuid);
 
 	boolean tradeCard(TradeDTO tradeDTO);
+
+    boolean deleteCard(String uuidDresseur, String uuidCard);
 }
