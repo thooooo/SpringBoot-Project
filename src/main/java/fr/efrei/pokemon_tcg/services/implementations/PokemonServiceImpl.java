@@ -37,7 +37,6 @@ public class PokemonServiceImpl implements IPokemonService {
 
 	@Override
 	public Pokemon findById(String uuid) {
-		// renvoie soit un pokemon soit null
 		return repository.findById(uuid).orElse(null);
 	}
 

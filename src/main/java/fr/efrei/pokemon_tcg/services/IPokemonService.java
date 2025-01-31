@@ -1,7 +1,6 @@
 package fr.efrei.pokemon_tcg.services;
 
 import fr.efrei.pokemon_tcg.constants.TypePokemon;
-import fr.efrei.pokemon_tcg.controllers.PokemonController;
 import fr.efrei.pokemon_tcg.dto.CreatePokemon;
 import fr.efrei.pokemon_tcg.models.Pokemon;
 

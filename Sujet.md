@@ -35,4 +35,4 @@ Projet à rendre via dépot git par groupe de 2 (un seul mail par dépôt).
 Le dépôt doit être envoyé par mail à l'adresse suivante : kelig.martin@intervenants.efrei.net
 Titre du mail : [Nom - Prénom] des deux élèves du groupe.
 
-La note de zéro sera attribuée en cas de triche, de non rendu, ou de rendu en retard du projet. Le code réalisé en cours n'est pas compris dans la note
+La note de zéro sera attribuée en cas de triche, de non rendu, ou de rendu en retard du projet.

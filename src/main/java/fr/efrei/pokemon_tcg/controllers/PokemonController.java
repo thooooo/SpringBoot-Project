@@ -23,7 +23,6 @@ public class PokemonController {
 
 	@GetMapping
 	public ResponseEntity<List<Pokemon>> getAll(@RequestParam(required = false) TypePokemon type) {
-		// SELECT * from pokemon;
 		return new ResponseEntity<>(pokemonService.findAll(type), HttpStatus.OK);
 	}
 
@@ -38,7 +37,6 @@ public class PokemonController {
 
 	@PostMapping
 	public ResponseEntity<?> createPokemon(@Valid @RequestBody CreatePokemon pokemon) {
-		// INSERT INTO pokemon(nom, niveau, type) VALUES (pokemon.nom, pokemon.niveau, pokemon.type);
 		pokemonService.create(pokemon);
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
