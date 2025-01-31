@@ -1,7 +1,13 @@
 package fr.efrei.pokemon_tcg.dto;
 
+import jakarta.validation.constraints.NotNull;
+
 public class BattleRequestDTO {
+
+    @NotNull(message = "L'UUID du dresseur challenger ne peut pas être nul")
     private String challengerUuid;
+
+    @NotNull(message = "L'UUID du dresseur challenged ne peut pas être nul")
     private String challengedUuid;
 
     public String getChallengerUuid() {

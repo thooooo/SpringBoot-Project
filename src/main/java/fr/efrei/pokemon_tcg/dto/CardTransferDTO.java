@@ -1,9 +1,16 @@
 package fr.efrei.pokemon_tcg.dto;
 
+import jakarta.validation.constraints.NotNull;
+
 public class CardTransferDTO {
     
+    @NotNull(message = "L'UUID du carton ne peut pas être nul")
     private String cardUuid;
+
+    @NotNull(message = "L'UUID du deck source ne peut pas être nul")
     private String sourceDeck; 
+
+    @NotNull(message = "L'UUID du deck cible ne peut pas être nul")
     private String targetDeck;
 
     public String getCardUuid() {

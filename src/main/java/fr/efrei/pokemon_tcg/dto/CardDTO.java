@@ -1,6 +1,7 @@
 package fr.efrei.pokemon_tcg.dto;
 
 import fr.efrei.pokemon_tcg.models.Pokemon;
+import jakarta.validation.constraints.Min;
 
 import java.util.List;
 
@@ -8,6 +9,8 @@ public class CardDTO {
     private String uuid;
     private Pokemon pokemon;
     private List<String> attacks;
+
+    @Min(value = 1, message = "Le rareté du pokémon doit être supérieure ou égale à 1")
     private int rarity;
 
     public CardDTO() {}

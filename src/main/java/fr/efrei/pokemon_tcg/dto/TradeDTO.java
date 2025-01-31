@@ -2,13 +2,24 @@ package fr.efrei.pokemon_tcg.dto;
 
 import java.time.LocalDateTime;
 import fr.efrei.pokemon_tcg.models.Trade;
+import jakarta.validation.constraints.NotNull;
 
 public class TradeDTO {
     private String uuid;
+
+    @NotNull(message = "L'UUID du dresseur source ne peut pas être nul")
     private String sourceDresseurUuid;
+
+    @NotNull(message = "L'UUID du dresseur cible ne peut pas être nul")
     private String targetDresseurUuid;
+
+    @NotNull(message = "L'UUID de la carte source ne peut pas être nul")
     private String sourceCardUuid;
+
+    @NotNull(message = "L'UUID de la carte cible ne peut pas être nul")
     private String targetCardUuid;
+
+    @NotNull(message = "La date de l'echange ne peut pas être nulle")
     private LocalDateTime dateEchange;
 
     public TradeDTO() {}
