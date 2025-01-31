@@ -1,3 +1,5 @@
+### POKEMON TCG API
+
 ## Contrôleur de Cartes (`/card/{dresseurUuid}`)
 - `GET /card/{dresseurUuid}/draw`: Tirer des cartes pour un dresseur
   - Paramètre de requête : `numberOfCards` (défaut : 5)
