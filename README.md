@@ -1,4 +1,4 @@
-### POKEMON TCG API
+# **POKEMON TCG API**
 
 ## Contrôleur de Cartes (`/card/{dresseurUuid}`)
 - `GET /card/{dresseurUuid}/draw`: Tirer des cartes pour un dresseur
