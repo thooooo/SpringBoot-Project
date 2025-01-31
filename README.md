@@ -6,6 +6,7 @@
   - Retourne la liste des cartes tirées
 
 - `GET /card/{dresseurUuid}`: Obtenir toutes les cartes d'un dresseur
+- `GET /card/{dresseurUuid}/delete/{cardUuid}`: Supprimer la carte d'un dresseur
 
 ## Contrôleur de Dresseurs (`/dresseurs`)
 - `GET /dresseurs`: Lister tous les dresseurs
