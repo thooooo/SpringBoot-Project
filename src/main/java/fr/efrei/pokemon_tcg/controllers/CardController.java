@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/card/{dresseurUuid}")
+@RequestMapping("/card")
 public class CardController {
 
     private final IDresseurService dresseurService;
@@ -20,7 +20,7 @@ public class CardController {
         this.dresseurService = dresseurService;
     }
 
-    @GetMapping("/draw")
+    @GetMapping("/{dresseurUuid}/draw")
     public ResponseEntity<?> drawCards(@PathVariable String dresseurUuid, @RequestParam(defaultValue = "5") int numberOfCards) {
         try {
             List<Card> drawnCards = dresseurService.drawCards(dresseurUuid, numberOfCards);
@@ -36,7 +36,7 @@ public class CardController {
         }
     }
 
-    @GetMapping
+    @GetMapping("/{dresseurUuid}")
     public ResponseEntity<List<CardDTO>> getCards(@PathVariable String dresseurUuid) {
         List<Card> cards = dresseurService.getCards(dresseurUuid);
 
